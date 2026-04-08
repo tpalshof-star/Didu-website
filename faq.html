@@ -7,6 +7,10 @@
 <meta name="description" content="Frequently asked questions about Didu, the daily insight app. Pricing, content, privacy, and more.">
 <link rel="icon" href="img/favicon.png" type="image/png">
 <link rel="canonical" href="https://didu.app/faq.html">
+
+<!-- Analytics (cookie-free) -->
+<script defer data-domain="didu.app" src="https://plausible.io/js/script.js"></script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -218,6 +222,17 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   });
 });
 </script>
+
+<!-- GDPR Cookie Banner -->
+<div id="gdpr-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:rgba(29,29,31,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); padding:18px 24px; font-family:'Inter',-apple-system,sans-serif;">
+  <div style="max-width:960px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <p style="color:rgba(255,255,255,0.88); font-size:13px; line-height:1.5; margin:0; flex:1; min-width:240px;">
+      We respect your privacy. This site uses <a href="https://plausible.io" target="_blank" rel="noopener" style="color:#E8612D; text-decoration:underline;">Plausible Analytics</a> — no cookies, no personal data, no tracking. Read our <a href="privacy.html" style="color:#E8612D; text-decoration:underline;">Privacy Policy</a>.
+    </p>
+    <button onclick="document.getElementById('gdpr-banner').style.display='none'; localStorage.setItem('didu_gdpr','1');" style="background:#E8612D; color:#fff; border:none; padding:9px 22px; border-radius:980px; font-size:13px; font-weight:600; cursor:pointer; white-space:nowrap; font-family:'Inter',-apple-system,sans-serif; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Got it</button>
+  </div>
+</div>
+<script>if(!localStorage.getItem('didu_gdpr'))document.getElementById('gdpr-banner').style.display='block';</script>
 
 </body>
 </html>
