@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Didu</title>
+<meta name="description" content="Frequently asked questions about Didu, the daily insight app. Pricing, content, privacy, and more.">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="canonical" href="https://didu.app/faq.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- FAQ Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is Didu?", "acceptedAnswer": { "@type": "Answer", "text": "Didu delivers one surprising, science-based insight to your phone every morning. Each 'drop' takes under 2 minutes to read and covers topics from psychology to cosmology. No feed, no scroll — just one calm idea to start your day." }},
+    { "@type": "Question", "name": "How much does Didu cost?", "acceptedAnswer": { "@type": "Answer", "text": "Didu is free to try. After the trial, it's $9.99/month or $29.99/year. No ads, no hidden fees." }},
+    { "@type": "Question", "name": "Is Didu available on Android?", "acceptedAnswer": { "@type": "Answer", "text": "Didu is currently available on iOS through the App Store. Android is on our roadmap." }},
+    { "@type": "Question", "name": "How is the content created?", "acceptedAnswer": { "@type": "Answer", "text": "Every drop is researched, written, and fact-checked by our editorial team. Each insight includes at least two sources so you can verify and explore further." }}
+  ]
+}
+</script>
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --orange: #E8612D; --orange-light: #fef4f0; --heading: #1d1d1f; --text: #1d1d1f;
+  --text-secondary: #6e6e73; --bg: #fbfbfd; --bg-alt: #f5f5f7;
+  --white: #ffffff; --font-heading: 'DM Sans', sans-serif; --font-body: 'Inter', -apple-system, sans-serif;
+  --ease: cubic-bezier(.4,0,.2,1);
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--text); background: var(--bg); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+nav { background: rgba(251,251,253,0.82); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border-bottom: 0.5px solid rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+.nav-inner { max-width: 980px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+nav .logo img { height: 30px; }
+.nav-back { text-decoration: none; font-size: 13px; font-weight: 500; color: var(--text-secondary); transition: color 0.2s; }
+.nav-back:hover { color: var(--text); }
+
+.page-header { padding: 80px 0 40px; text-align: center; }
+.page-header h1 { font-family: var(--font-heading); font-size: clamp(32px, 5vw, 48px); font-weight: 700; color: var(--heading); letter-spacing: -0.03em; line-height: 1.1; }
+.page-header p { font-size: 17px; color: var(--text-secondary); margin-top: 12px; }
+
+.faq-list { max-width: 680px; margin: 0 auto; padding: 0 24px 120px; }
+
+.faq-item {
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.faq-q {
+  width: 100%; background: none; border: none; cursor: pointer;
+  padding: 24px 0; text-align: left;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  font-family: var(--font-heading); font-size: 17px; font-weight: 600;
+  color: var(--heading); letter-spacing: -0.01em;
+  transition: color 0.2s;
+}
+
+.faq-q:hover { color: var(--orange); }
+
+.faq-q .icon {
+  width: 24px; height: 24px; flex-shrink: 0;
+  border-radius: 50%; background: var(--orange-light);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.3s var(--ease), background 0.3s;
+}
+
+.faq-q .icon svg { width: 12px; height: 12px; stroke: var(--orange); stroke-width: 2.5; fill: none; }
+
+.faq-item.open .faq-q .icon { transform: rotate(45deg); background: var(--orange); }
+.faq-item.open .faq-q .icon svg { stroke: #fff; }
+
+.faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s var(--ease), padding 0.3s;
+}
+
+.faq-item.open .faq-a { max-height: 400px; }
+
+.faq-a-inner {
+  padding: 0 0 24px;
+  font-size: 15px; color: var(--text-secondary); line-height: 1.7;
+}
+
+.faq-a-inner a { color: var(--orange); text-decoration: none; }
+.faq-a-inner a:hover { text-decoration: underline; }
+
+/* CTA */
+.faq-cta {
+  max-width: 680px; margin: 0 auto 80px; padding: 0 24px;
+  text-align: center;
+}
+
+.faq-cta p { font-size: 15px; color: var(--text-secondary); margin-bottom: 8px; }
+.faq-cta a { color: var(--orange); text-decoration: none; font-weight: 600; }
+.faq-cta a:hover { text-decoration: underline; }
+
+footer { padding: 40px 0 32px; background: var(--bg-alt); }
+.footer-inner { max-width: 980px; margin: 0 auto; padding: 0 24px; display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.footer-brand img { height: 22px; margin-bottom: 10px; }
+.footer-brand p { font-size: 12px; color: var(--text-secondary); max-width: 200px; line-height: 1.5; }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { text-decoration: none; font-size: 12px; color: var(--text-secondary); transition: color 0.2s; }
+.footer-links a:hover { color: var(--text); }
+.footer-legal { text-align: right; font-size: 11px; color: var(--text-secondary); line-height: 1.7; opacity: 0.6; }
+
+@media (max-width: 768px) {
+  .footer-inner { flex-direction: column; }
+  .footer-legal { text-align: left; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo"><img src="img/logo.png" alt="Didu" width="90" height="30"></a>
+    <a href="/" class="nav-back">&larr; Back to home</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Frequently Asked Questions</h1>
+  <p>Everything you need to know about Didu.</p>
+</div>
+
+<div class="faq-list">
+
+  <div class="faq-item">
+    <button class="faq-q">What is Didu?<span class="icon"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></span></button>
+    <div class="faq-a"><div class="faq-a-inner">Didu delivers one surprising, science-based insight to your phone every morning. Each "drop" takes under 2 minutes to read and covers topics from psychology to cosmology. No feed, no scroll — just one calm idea to start your day.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">How much does Didu cost?<span class="icon"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></span></button>
+    <div class="faq-a"><div class="faq-a-inner">Didu is free to try. After the trial, it's $9.99/month or $29.99/year. No ads, no hidden fees. You can cancel anytime through your App Store settings.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">What topics does Didu cover?<span class="icon"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></span></button>
+    <div class="faq-a"><div class="faq-a-inner">Every day of the week has its own theme: Sunday is Universe &amp; Philosophy, Monday is Psychology &amp; Behaviour, Tuesday is Science &amp; Technology, Wednesday is History &amp; Culture, Thursday is Economy &amp; Society, Friday is Nature &amp; Biology, and Saturday is Art &amp; Creativity.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">How is the content created?<span class="icon"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></span></button>
+    <div class="faq-a"><div class="faq-a-inner">Every drop is researched, written, and fact-checked by our editorial team. Each insight includes at least two sources so you can verify and explore further. We consult with scientists and subject matter experts to ensure accuracy.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">Is Didu available on Android?<span class="icon"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></span></button>
+    <div class="faq-a"><div class="faq-a-inner">Didu is currently available on iOS through the App Store. Android is on our roadmap — stay tuned.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">Can I read older drops?<span class="icon"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></span></button>
+    <div class="faq-a"><div class="faq-a-inner">Yes! Your drops are saved in the app so you can revisit them anytime. You can also save your favourites for easy access.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">What are Memory Boost quizzes?<span class="icon"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></span></button>
+    <div class="faq-a"><div class="faq-a-inner">After each drop, you can take a short quiz to test what you learned. These quizzes are designed to help move insights from short-term to long-term memory. It's a fun way to actually remember what you read.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">Does Didu track me or show ads?<span class="icon"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></span></button>
+    <div class="faq-a"><div class="faq-a-inner">No. Didu has no ads, no tracking, and no data selling. We're funded entirely by subscriptions. Read our <a href="privacy.html">Privacy Policy</a> for the full details.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">How do I cancel my subscription?<span class="icon"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></span></button>
+    <div class="faq-a"><div class="faq-a-inner">Open the Settings app on your iPhone, tap your name at the top, then Subscriptions. Find Didu and tap Cancel Subscription. You'll keep access until the end of your current billing period.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">Where is Didu available?<span class="icon"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></span></button>
+    <div class="faq-a"><div class="faq-a-inner">Didu is currently available in the EU through the App Store. We're planning to expand to more regions soon.</div></div>
+  </div>
+
+</div>
+
+<div class="faq-cta">
+  <p>Still have questions?</p>
+  <a href="mailto:support@didu.app">Get in touch &rarr;</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="img/logo.png" alt="Didu">
+      <p>No ads. No tracking. No noise. Just sharp thinking, delivered daily.</p>
+    </div>
+    <div class="footer-links">
+      <a href="faq.html">FAQ</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@didu.app">Contact</a>
+    </div>
+    <div class="footer-legal">
+      &copy; 2026 Didu Labs ApS<br>Copenhagen, Denmark<br>CVR: 45766446
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    // Toggle clicked
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+
+</body>
+</html>
