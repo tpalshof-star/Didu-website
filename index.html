@@ -497,6 +497,7 @@ nav .logo img { height: 30px; }
   display: block;
 }
 
+
 .mind-card h3 {
   font-family: var(--font-heading);
   font-size: 20px; font-weight: 700;
@@ -949,28 +950,35 @@ footer { padding: 40px 0 32px; background: var(--bg-alt); }
     <h2 class="section-title">Read. Remember. Grow.</h2>
     <p class="section-sub center">Didu doesn't just show you facts — it helps you keep them. Track your learning, test your memory, and build a daily streak.</p>
 
-    <div class="mind-grid reveal-stagger">
+    <div class="mind-grid reveal-stagger" id="mind-grid">
+
+      <!-- MEMORY BOOST -->
       <div class="mind-card">
         <div class="phone-frame">
-          <img src="img/screen-memory.png" alt="Memory Score showing 33% accuracy from completed quizzes" loading="lazy">
+          <img src="img/screen-memory.png" alt="Memory Score showing 72% accuracy from completed quizzes" loading="lazy">
         </div>
         <h3>Memory Boost</h3>
         <p>Twice a week, quizzes test what you've learned. Watch your accuracy grow as knowledge moves from short-term to long-term memory.</p>
       </div>
+
+      <!-- LEARNING INSIGHTS -->
       <div class="mind-card">
         <div class="phone-frame">
-          <img src="img/screen-learning.png" alt="Learning insights showing 63% new knowledge from daily drops" loading="lazy">
+          <img src="img/screen-learning.png" alt="Learning insights showing 62% new knowledge from daily drops" loading="lazy">
         </div>
         <h3>Learning Insights</h3>
         <p>See what's genuinely new vs. what you already knew. Didu maps your curiosity — which topics surprise you, and where you're already an expert.</p>
       </div>
+
+      <!-- DAILY STREAKS -->
       <div class="mind-card">
         <div class="phone-frame">
-          <img src="img/screen-streaks.png" alt="Daily streak calendar showing consistent reading habit" loading="lazy">
+          <img src="img/screen-streaks.png" alt="Daily streak calendar with 30 day streak" loading="lazy">
         </div>
         <h3>Daily Streaks</h3>
         <p>One drop a day. Your streak tracks the habit. No guilt, no pressure — just a quiet reminder that showing up for your mind matters.</p>
       </div>
+
     </div>
 
     <p class="mind-bottom"><strong>Under 2 minutes a day. That's it.</strong> Not another productivity tool. Not an endless course. Just one small act of curiosity that compounds over time.</p>
@@ -1186,6 +1194,7 @@ track.addEventListener('mousedown', e => { down = true; sx = e.pageX - track.off
 track.addEventListener('mouseleave', () => { down = false; track.style.cursor = 'grab'; });
 track.addEventListener('mouseup', () => { down = false; track.style.cursor = 'grab'; });
 track.addEventListener('mousemove', e => { if (!down) return; e.preventDefault(); track.scrollLeft = sl - (e.pageX - track.offsetLeft - sx) * 1.5; });
+
 </script>
 
 <!-- GDPR Cookie Banner -->
