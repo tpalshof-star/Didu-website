@@ -119,8 +119,8 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --orange: #E8612D;
-  --orange-hover: #d4551f;
+  --orange: #f55c3a;
+  --orange-hover: #d85133;
   --orange-light: #fbe9df;
   --orange-mid: #f6d9c6;
   --heading: #1d1d1f;
@@ -171,7 +171,7 @@ nav .logo img { height: 26px; width: auto; display: block; }
 .content li { position: relative; padding-left: 20px; font-size: 16px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 9px; }
 .content li::before { content: ''; position: absolute; left: 2px; top: 12px; width: 5px; height: 5px; border-radius: 50%; background: var(--orange); }
 .content li strong { color: var(--text); font-weight: 600; }
-.content a { color: var(--orange); text-decoration: none; border-bottom: 1px solid rgba(232,97,45,0.35); }
+.content a { color: var(--orange); text-decoration: none; border-bottom: 1px solid rgba(245,92,58,0.35); }
 .content a:hover { border-bottom-color: var(--orange); }
 .highlight { color: var(--text); font-weight: 600; }
 
@@ -207,7 +207,7 @@ footer { padding: 40px 0 32px; background: var(--white); border-top: 0.5px solid
 .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
 .faq-item.open .faq-a { max-height: 520px; }
 .faq-a-inner { padding: 0 24px 20px; font-size: 15px; color: var(--text-secondary); line-height: 1.75; }
-.faq-a-inner a { color: var(--orange); text-decoration: none; border-bottom: 1px solid rgba(232,97,45,0.35); }
+.faq-a-inner a { color: var(--orange); text-decoration: none; border-bottom: 1px solid rgba(245,92,58,0.35); }
 .contribute-cta-note { max-width: 720px; margin: 0 auto; padding: 8px 24px 0; }
 
 /* CONTRIBUTE */
@@ -223,7 +223,7 @@ footer { padding: 40px 0 32px; background: var(--white); border-top: 0.5px solid
 
 <nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo"><img src="img/logo.webp" alt="Didu"></a>
+    <a href="index.html" class="logo"><img src="img/logo.svg" alt="Didu"></a>
     <a href="https://apps.apple.com/app/didu" class="btn-get"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> Get Didu free</a>
   </div>
 </nav>
@@ -286,7 +286,7 @@ footer { padding: 40px 0 32px; background: var(--white); border-top: 0.5px solid
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="img/logo.webp" alt="Didu" loading="lazy" decoding="async">
+      <img src="img/logo.svg" alt="Didu" loading="lazy" decoding="async">
       <p>Something amazing, every day.</p>
     </div>
     <div class="footer-links">
@@ -328,9 +328,9 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 <div id="gdpr-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:rgba(29,29,31,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); padding:18px 24px; font-family:'Inter',-apple-system,sans-serif;">
   <div style="max-width:960px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
     <p style="color:rgba(255,255,255,0.88); font-size:13px; line-height:1.5; margin:0; flex:1; min-width:240px;">
-      We respect your privacy. This site uses <a href="https://plausible.io" target="_blank" rel="noopener" style="color:#E8612D; text-decoration:underline;">Plausible Analytics</a> &mdash; no cookies, no personal data, no tracking. Read our <a href="privacy.html" style="color:#E8612D; text-decoration:underline;">Privacy Policy</a>.
+      We respect your privacy. This site uses <a href="https://plausible.io" target="_blank" rel="noopener" style="color:#f55c3a; text-decoration:underline;">Plausible Analytics</a> &mdash; no cookies, no personal data, no tracking. Read our <a href="privacy.html" style="color:#f55c3a; text-decoration:underline;">Privacy Policy</a>.
     </p>
-    <button onclick="document.getElementById('gdpr-banner').style.display='none'; localStorage.setItem('didu_gdpr','1');" style="background:#E8612D; color:#fff; border:none; padding:9px 22px; border-radius:980px; font-size:13px; font-weight:600; cursor:pointer; white-space:nowrap; font-family:'Inter',-apple-system,sans-serif;">Got it</button>
+    <button onclick="document.getElementById('gdpr-banner').style.display='none'; localStorage.setItem('didu_gdpr','1');" style="background:#f55c3a; color:#fff; border:none; padding:9px 22px; border-radius:980px; font-size:13px; font-weight:600; cursor:pointer; white-space:nowrap; font-family:'Inter',-apple-system,sans-serif;">Got it</button>
   </div>
 </div>
 <script>if(!localStorage.getItem('didu_gdpr'))document.getElementById('gdpr-banner').style.display='block';</script>

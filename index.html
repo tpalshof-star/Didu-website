@@ -35,8 +35,8 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --orange: #E8612D;
-  --orange-hover: #d4551f;
+  --orange: #f55c3a;
+  --orange-hover: #d85133;
   --orange-light: #fbe9df;
   --orange-mid: #f6d9c6;
   --heading: #1d1d1f;
@@ -201,7 +201,7 @@ nav .logo img { height: 26px; }
 .remember-pull {
   font-family: var(--font-heading); font-size: 19px; font-weight: 600;
   color: var(--orange); line-height: 1.4; letter-spacing: -0.01em;
-  border-top: 1px solid rgba(232,97,45,0.25); padding-top: 18px; margin-top: 20px;
+  border-top: 1px solid rgba(245,92,58,0.25); padding-top: 18px; margin-top: 20px;
 }
 @media (max-width: 768px) {
   .remember-card { padding: 30px 22px; }
@@ -266,6 +266,16 @@ footer { padding: 40px 0 32px; background: var(--white); border-top: 0.5px solid
   .footer-inner { flex-direction: column; }
   .footer-legal { text-align: left; }
 }
+
+/* CIRCLE MOTIF — the shapes from the app backgrounds, behind the two quiet bands */
+.founder, .final-cta { position: relative; overflow: hidden; }
+.founder > *, .final-cta > * { position: relative; z-index: 1; }
+.founder::before, .final-cta::before {
+  content: ''; position: absolute; inset: 0; z-index: 0;
+  background: url('img/bg-shapes.svg') center/cover no-repeat;
+  pointer-events: none;
+}
+.final-cta::before { transform: scaleX(-1); }
 </style>
 </head>
 <body>
@@ -273,7 +283,7 @@ footer { padding: 40px 0 32px; background: var(--white); border-top: 0.5px solid
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#" class="logo"><img src="img/logo.webp" alt="Didu"></a>
+    <a href="#" class="logo"><img src="img/logo.svg" alt="Didu"></a>
     <ul class="nav-links">
       <li><a href="#whatis">What it is</a></li>
       <li><a href="#themes">Themes</a></li>
@@ -512,7 +522,7 @@ footer { padding: 40px 0 32px; background: var(--white); border-top: 0.5px solid
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="img/logo.webp" alt="Didu" loading="lazy" decoding="async">
+      <img src="img/logo.svg" alt="Didu" loading="lazy" decoding="async">
       <p>Something amazing, every day.</p>
     </div>
     <div class="footer-links">
@@ -593,9 +603,9 @@ track.addEventListener('mousemove', e => { if (!down) return; e.preventDefault()
 <div id="gdpr-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:rgba(29,29,31,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); padding:18px 24px; font-family:'Inter',-apple-system,sans-serif;">
   <div style="max-width:960px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
     <p style="color:rgba(255,255,255,0.88); font-size:13px; line-height:1.5; margin:0; flex:1; min-width:240px;">
-      We respect your privacy. This site uses <a href="https://plausible.io" target="_blank" rel="noopener" style="color:#E8612D; text-decoration:underline;">Plausible Analytics</a> &mdash; no cookies, no personal data, no tracking. Read our <a href="privacy.html" style="color:#E8612D; text-decoration:underline;">Privacy Policy</a>.
+      We respect your privacy. This site uses <a href="https://plausible.io" target="_blank" rel="noopener" style="color:#f55c3a; text-decoration:underline;">Plausible Analytics</a> &mdash; no cookies, no personal data, no tracking. Read our <a href="privacy.html" style="color:#f55c3a; text-decoration:underline;">Privacy Policy</a>.
     </p>
-    <button onclick="document.getElementById('gdpr-banner').style.display='none'; localStorage.setItem('didu_gdpr','1');" style="background:#E8612D; color:#fff; border:none; padding:9px 22px; border-radius:980px; font-size:13px; font-weight:600; cursor:pointer; white-space:nowrap; font-family:'Inter',-apple-system,sans-serif;">Got it</button>
+    <button onclick="document.getElementById('gdpr-banner').style.display='none'; localStorage.setItem('didu_gdpr','1');" style="background:#f55c3a; color:#fff; border:none; padding:9px 22px; border-radius:980px; font-size:13px; font-weight:600; cursor:pointer; white-space:nowrap; font-family:'Inter',-apple-system,sans-serif;">Got it</button>
   </div>
 </div>
 <script>if(!localStorage.getItem('didu_gdpr'))document.getElementById('gdpr-banner').style.display='block';</script>
