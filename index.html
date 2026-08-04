@@ -275,6 +275,9 @@ footer { padding: 40px 0 32px; background: var(--white); border-top: 0.5px solid
   pointer-events: none;
 }
 .final-cta::before { transform: scaleX(-1); }
+@media (max-width: 768px) {
+  .founder::before, .final-cta::before { background-image: url('img/bg-shapes-narrow.svg'); }
+}
 </style>
 </head>
 <body>
